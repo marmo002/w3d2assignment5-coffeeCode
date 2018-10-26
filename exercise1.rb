@@ -4,12 +4,10 @@ movie_array = [
   ['Martin Scorsese', 'The Wolf of Wall Street']
 ]
 
-def to_hash(movie_array)
-  movie_hash = {}
-  movie_array.each_with_index.map do  |array, i|
-    movie_hash[array[0]] = array[1]
-  end
-  return movie_hash
+def convert(movie_array)
+
+  movie_array.to_h
+
 end
 
-p to_hash(movie_array)
+puts convert(movie_array).inspect
